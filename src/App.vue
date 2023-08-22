@@ -66,11 +66,11 @@ const hold = () => {
       player2GameScore.value = 0;
     }
 
-    if (player1Score.value >= 10) {
+    if (player1Score.value >= 100) {
       player1Win.value = true;
       console.log(player1Win.value);
     }
-    if (player2Score.value >= 10) {
+    if (player2Score.value >= 100) {
       player2Win.value = true;
     }
     player1Active.value = !player1Active.value;
