@@ -66,11 +66,11 @@ const hold = () => {
       player2GameScore.value = 0;
     }
 
-    if (player1Score.value >= 100) {
+    if (player1Score.value >= 10) {
       player1Win.value = true;
       console.log(player1Win.value);
     }
-    if (player2Score.value >= 100) {
+    if (player2Score.value >= 10) {
       player2Win.value = true;
     }
     player1Active.value = !player1Active.value;
@@ -124,8 +124,9 @@ const hold = () => {
           :class="{
             'bg-opacity-70': !player1Active,
             'bg-green-600': player1Win,
+            'bg-white': !player1Win,
           }"
-          class="player1Body transition-all rounded-tl-2xl rounded-bl-2xl bg-white flex flex-col justify-between items-center p-11"
+          class="player1Body transition-all rounded-tl-2xl rounded-bl-2xl flex flex-col justify-between items-center p-11"
         >
           <div class="text flex flex-col justify-center items-center">
             <h1 class="text-pink-500 text-4xl">PLAYER 1</h1>
@@ -141,10 +142,11 @@ const hold = () => {
       </div>
       <div class="player2Wrapper w-1/2">
         <div
-          class="player2Body transition-all rounded-tr-2xl rounded-br-2xl bg-white flex flex-col justify-between items-center p-11"
+          class="player2Body transition-all rounded-tr-2xl rounded-br-2xl flex flex-col justify-between items-center p-11"
           :class="{
             'bg-opacity-70': !player2Active,
             'bg-green-600': player2Win,
+            'bg-white': !player2Win,
           }"
         >
           <div class="text flex flex-col justify-center items-center">
